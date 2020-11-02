@@ -1,0 +1,24 @@
+NAME = libdlist.a
+HDRS = dlist.h
+LIBFTPATH = ../../pure_libft
+SRCS = dlist_new.c dlist_newnode.c
+OBJS = $(SRCS:.c=.o)
+CFLAGS = -Wall -Werror -Wextra
+IFLAGS = -I$(LIBFTPATH)
+LFLAGS = -L$(LIBFTPATH) -lft
+
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	ar -urc $(NAME) $(OBJS)
+
+%.o: %.c $(HDRS)
+	gcc -c $(IFLAGS) $(CFLAGS) $< -o $@ $(LFLAGS)
+
+clean:
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
