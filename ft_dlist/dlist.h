@@ -26,5 +26,6 @@ void		dlist_pop_back(t_dlist *list);
 void		dlist_pop_front(t_dlist *list);
 void		*dlist_front(t_dlist *list);
 void		*dlist_back(t_dlist *list);
-int		dlist_insert(t_dlistnode *pos, const void *data, size_t size);
+t_dlistnode	*dlist_insert(t_dlist *list, t_dlistnode *pos,
+		const void *data, size_t size);
 #endif
