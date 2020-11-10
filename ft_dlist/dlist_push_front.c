@@ -1,6 +1,6 @@
 #include "dlist.h"
 
-int	dlist_push_back(t_dlist *list, const void *data, size_t size)
+int	dlist_push_front(t_dlist *list, const void *data, size_t size)
 {
 	t_dlistnode	*in;
 
