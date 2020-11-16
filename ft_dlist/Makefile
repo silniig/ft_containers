@@ -4,7 +4,7 @@ LIBFTPATH = ../../pure_libft
 SRCS = dlist_new.c dlist_newnode.c dlist_delnode.c dlist_dellist.c \
        link_after.c dlist_push_back.c dlist_push_front.c dlist_unlink.c \
        dlist_pop_front.c dlist_pop_back.c dlist_front.c dlist_back.c \
-       dlist_insert.c
+       dlist_insert.c dlist_begin.c dlist_end.c
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Wall -Werror -Wextra
 IFLAGS = -I$(LIBFTPATH)

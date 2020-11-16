@@ -28,4 +28,6 @@ void		*dlist_front(t_dlist *list);
 void		*dlist_back(t_dlist *list);
 t_dlistnode	*dlist_insert(t_dlist *list, t_dlistnode *pos,
 		const void *data, size_t size);
+t_dlistnode	*dlist_begin(t_dlist *list);
+t_dlistnode	*dlist_end(t_dlist *list);
 #endif
