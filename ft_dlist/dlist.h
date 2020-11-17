@@ -30,4 +30,8 @@ t_dlistnode	*dlist_insert(t_dlist *list, t_dlistnode *pos,
 		const void *data, size_t size);
 t_dlistnode	*dlist_begin(t_dlist *list);
 t_dlistnode	*dlist_end(t_dlist *list);
+t_dlistnode	*dlist_erase(t_dlist *list, t_dlistnode *pos,
+		void (*del)(void *, size_t));
+t_dlistnode	*dlist_erase_range(t_dlist *list, t_dlistnode *first,
+		t_dlistnode *last, void (*del)(void *, size_t));
 #endif
