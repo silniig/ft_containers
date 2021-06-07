@@ -37,4 +37,6 @@ t_dlistnode	*dlist_erase_range(t_dlist *list, t_dlistnode *first,
 void		dlist_reverse(t_dlist *list);
 int		dlist_equal(t_dlist *first, t_dlist *second,
 		int (*eq)(void *, void *, size_t));
+size_t		dlist_unique(t_dlist *list, int (*eq)(void *, void *, size_t),
+		void (*del)(void *, size_t));
 #endif
