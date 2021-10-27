@@ -19,6 +19,7 @@ t_dlist		*dlist_new(void);
 void		dlist_delnode(t_dlistnode **node, void (*del)(void *, size_t));
 void		dlist_dellist(t_dlist **list, void (*del)(void *, size_t));
 void		link_after(t_dlistnode *node, t_dlistnode *before);
+void		link_before(t_dlistnode *node, t_dlistnode *after);
 int		dlist_push_back(t_dlist *list, const void *data, size_t size);
 int		dlist_push_front(t_dlist *list, const void *data, size_t size);
 void		dlist_unlink(t_dlistnode *node);
@@ -39,4 +40,5 @@ int		dlist_equal(t_dlist *first, t_dlist *second,
 		int (*eq)(void *, void *, size_t));
 size_t		dlist_unique(t_dlist *list, int (*eq)(void *, void *, size_t),
 		void (*del)(void *, size_t));
+void		dlist_sort(t_dlist *list, int (*cmp)(void *, void *, size_t));
 #endif
