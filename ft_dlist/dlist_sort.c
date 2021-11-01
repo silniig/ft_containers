@@ -28,7 +28,7 @@ static t_dlistnode	*merge(t_dlistnode *left, t_dlistnode *right,
 		else
 			lmover = lmover->next;
 	}
-	return result;
+	return (result);
 }
 
 static t_dlistnode	*inner_sort(t_dlistnode *begin, t_dlistnode *end,
@@ -38,14 +38,14 @@ static t_dlistnode	*inner_sort(t_dlistnode *begin, t_dlistnode *end,
 	size_t		half;
 
 	if (size < 2)
-		return begin;
+		return (begin);
 	half = size / 2;
 	mid = begin;
 	while (half--)
 		mid = mid->next;
 	begin = inner_sort(begin, mid, size / 2, cmp);
 	mid = inner_sort(mid, end, size - size / 2, cmp);
-	return merge(begin, mid, end, cmp);
+	return (merge(begin, mid, end, cmp));
 }
 
 void			dlist_sort(t_dlist *list,
