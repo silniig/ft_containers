@@ -41,4 +41,5 @@ int		dlist_equal(t_dlist *first, t_dlist *second,
 size_t		dlist_unique(t_dlist *list, int (*eq)(void *, void *, size_t),
 		void (*del)(void *, size_t));
 void		dlist_sort(t_dlist *list, int (*cmp)(void *, void *, size_t));
+int		dlist_empty(t_dlist *list);
 #endif
