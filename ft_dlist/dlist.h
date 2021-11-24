@@ -23,8 +23,8 @@ void		link_before(t_dlistnode *node, t_dlistnode *after);
 int		dlist_push_back(t_dlist *list, const void *data, size_t size);
 int		dlist_push_front(t_dlist *list, const void *data, size_t size);
 void		dlist_unlink(t_dlistnode *node);
-void		dlist_pop_back(t_dlist *list);
-void		dlist_pop_front(t_dlist *list);
+void		dlist_pop_back(t_dlist *list, void (*del)(void *, size_t));
+void		dlist_pop_front(t_dlist *list, void (*del)(void *, size_t));
 void		*dlist_front(t_dlist *list);
 void		*dlist_back(t_dlist *list);
 t_dlistnode	*dlist_insert(t_dlist *list, t_dlistnode *pos,
