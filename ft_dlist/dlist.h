@@ -42,4 +42,5 @@ size_t		dlist_unique(t_dlist *list, int (*eq)(void *, void *, size_t),
 		void (*del)(void *, size_t));
 void		dlist_sort(t_dlist *list, int (*cmp)(void *, void *, size_t));
 int		dlist_empty(t_dlist *list);
+void		dlist_clear(t_dlist *list, void (*del)(void *, size_t));
 #endif
